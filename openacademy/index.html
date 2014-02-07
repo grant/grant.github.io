@@ -45,7 +45,7 @@
       window.onload = function(){
         var myLatlng = new google.maps.LatLng(30, 0);
         var myOptions = {
-          zoom: 3,
+          zoom: 1,
           center: myLatlng,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           disableDefaultUI: false,
@@ -127,7 +127,11 @@
         // this is important, because if you set the data set too early, the latlng/pixel projection doesn't work
         google.maps.event.addListenerOnce(map, "idle", function(){
           heatmap.setDataSet(testData);
+
+          // Fixes heatmap not loading bug
+          map.setZoom(3);
         });
+
       };
 
     </script>
