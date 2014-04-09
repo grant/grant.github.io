@@ -1,4 +1,4 @@
 grant.github.io
 ===============
 
-My main website
+The URL [grant.github.io](http://grant.github.io) redirects to [grant.cm](http://grant.cm)
